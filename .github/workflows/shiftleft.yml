@@ -18,12 +18,12 @@ jobs:
         distribution: zulu
         java-version: 8.0.x
 
-    - name: Setup Gradle 8.10
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        gradle-version: "5.1.1" # Quotes required to prevent YAML converting to number
-    - name: Build with Gradle 8.10
-      run: ./gradlew properties -p packages/clients/android
+    #- name: Setup Gradle 8.10
+    #  uses: gradle/actions/setup-gradle@v3
+    #  with:
+    #    gradle-version: "5.1.1" # Quotes required to prevent YAML converting to number
+   # - name: Build with Gradle 8.10
+    #  run: ./gradlew properties -p packages/clients/android
        #run: gradle build -p packages/clients/android
         
     - name: Download ShiftLeft CLI
@@ -36,7 +36,7 @@ jobs:
         SHIFTLEFT_SBOM_GENERATOR=1 ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app GoatlinCheck --verbose \
           --tag branch=${{ github.head_ref }} \
-          --kotlin .
+          --kotlin packages/clients/.
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
