@@ -26,8 +26,8 @@ jobs:
     #  run: ./gradlew properties -p packages/clients/android
        #run: gradle build -p packages/clients/android
         
-    - name: Setup Android SDK Tools
-      uses: android-actions/setup-android@v3.2.1
+    #- name: Setup Android SDK Tools
+     # uses: android-actions/setup-android@v3.2.1
       
     - name: Download ShiftLeft CLI
       run: |
