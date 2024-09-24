@@ -20,7 +20,7 @@ jobs:
 
     - name: Build
       run: |
-        gradle init
+        gradle init --overwrite
         
     - name: Download ShiftLeft CLI
       run: |
