@@ -29,7 +29,7 @@ jobs:
     - name: preZero Static Analysis
       run: |
         ${GITHUB_WORKSPACE}/sl --version
-        ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
+        SHIFTLEFT_SBOM_GENERATOR=1 ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app GoatlinCheck --verbose \
           --tag branch=${{ github.head_ref }} \
           --kotlin .
