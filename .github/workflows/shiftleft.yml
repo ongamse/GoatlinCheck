@@ -20,7 +20,7 @@ jobs:
 
     - name: Build
       run: |
-        gradle clean build
+        gradle clean build /packages/clients/android
         
     - name: Download ShiftLeft CLI
       run: |
