@@ -18,9 +18,9 @@ jobs:
         distribution: zulu
         java-version: 11.0.x
 
-    - name: Build
-      run: |
-        gradle init --overwrite
+    #- name: Build
+    #  run: |
+    #    gradle init --overwrite
         
     - name: Download ShiftLeft CLI
       run: |
