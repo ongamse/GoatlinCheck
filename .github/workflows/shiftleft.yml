@@ -19,9 +19,9 @@ jobs:
         java-version: 8.0.x
 
     - name: Setup Gradle 8.10
-      uses: gradle/actions/setup-gradle@v4
+      uses: gradle/actions/setup-gradle@v3
       with:
-        gradle-version: "5.1.1" # Quotes required to prevent YAML converting to number
+        gradle-version: "4.5" # Quotes required to prevent YAML converting to number
     - name: Build with Gradle 8.10
       run: gradle build -p packages/clients/android
        #run: gradle build -p packages/clients/android
