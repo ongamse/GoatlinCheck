@@ -26,7 +26,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
-          --app GoatlinCheck \
+          --app GoatlinCheck --verbose \
           --tag branch=${{ github.head_ref }} \
           --kotlin .
       env:
