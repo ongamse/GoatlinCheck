@@ -18,6 +18,10 @@ jobs:
         distribution: zulu
         java-version: 11.0.x
 
+    - name: Build
+      run: |
+        ./gradlew clean build
+        
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
