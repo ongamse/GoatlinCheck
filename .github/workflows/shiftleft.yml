@@ -23,7 +23,7 @@ jobs:
       with:
         gradle-version: "5.1.1" # Quotes required to prevent YAML converting to number
     - name: Build with Gradle 8.10
-      run: ./gradlew properties
+      run: ./gradlew properties -p packages/clients/android
        #run: gradle build -p packages/clients/android
         
     - name: Download ShiftLeft CLI
